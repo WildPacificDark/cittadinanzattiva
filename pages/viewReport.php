@@ -9,10 +9,10 @@
 			</div>
 			';
 	//SE ESISTE UNA SESSEIONE ATTIVA
-	if(isset($_SESSION["user_id"])) {
-		//RICHIEDI BARRA DI RICERCA
-		require_once '../html/body/bodyViewReport.html';
-		//RICHIEDI FILE DI CONFIGURAZIONE PER LA COMUNICAZIONE CON IL DATABASE
+	if(isset($_SESSION["userId"])) {
+	  //RICHIEDI BARRA DI RICERCA
+	  require_once '../html/body/bodyViewReport.html';
+	  //RICHIEDI FILE DI CONFIGURAZIONE PER LA COMUNICAZIONE CON IL DATABASE
         include '../php/database/config.php';
         //CONNETTITI AL DATABASE
         $mysqli = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
