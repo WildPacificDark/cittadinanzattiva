@@ -1,8 +1,10 @@
   <?php 
   session_start();
+  //IDENTIFICA IL TIPO DI PAGINA DA CARICARE
   if(isset($_GET['id'])) {
-	$page = $_GET['id'];
+    $page = $_GET['id'];
   }
+  //SE E' ATTIVA UNA SESSIONE
   if(isset($_SESSION["userId"])) {
     //FORM DI LOGIN	
     if($page == "login") {
