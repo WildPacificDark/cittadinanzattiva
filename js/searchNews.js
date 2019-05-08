@@ -24,38 +24,38 @@ function searchNews() {
       checkedRadio = radios[i].value;
       //FERMA LA RICERCA
       stop = true;
-	}
+    }
   }
   //IN BASE AL CAMPO SELEZIONATO CERCA LA NEWS
   switch (checkedRadio) {
     //CASO ID
     case "0":
-	  for (i = 0; i < id.length; i += 1) {
+      for (i = 0; i < id.length; i += 1) {
         //CERCA CORRISPONDENZA
         textValue = id[i].innerText || id[i].textContent;
         if (textValue.toUpperCase().indexOf(filter) > -1) {
-		  //SE ESISTE MOSTRA SOLO LA CORRISPONDENZA
+          //SE ESISTE MOSTRA SOLO LA CORRISPONDENZA
           newsHeader = id[i].parentNode;
-		  newsHeader.parentNode.className = "newsWrapper"
+          newsHeader.parentNode.className = "newsWrapper"
         } else {
           //E NASCONDI LE ALTRE
           newsHeader = id[i].parentNode;
-		  newsHeader.parentNode.className = "newsWrapper hidden"
+          newsHeader.parentNode.className = "newsWrapper hidden"
         }
       }
-	  //CONTROLLO SE NON CI SONO MATCH
-	  count = 0;
-	  for (i = 0; i < newsWrapper.length; i+= 1) {
+      //CONTROLLO SE NON CI SONO MATCH
+      count = 0;
+      for (i = 0; i < newsWrapper.length; i+= 1) {
         //SE TUTTE LE NEWS HANNO IL CAMPO HIDDEN
         if (newsWrapper[i].className === "newsWrapper hidden") {
           count += 1; //INCREMENTA COUNT
-		} else {
+        } else {
           count -= 1; //VICEVERSA DECREMENTA
-		}
+        }
       }
-	  //NESSUN MATH -> NESSUN RISULTATO
-      if(count === newsWrapper.length) {
-		  noResults.innerHTML = "Nessun risultato";
+      //NESSUN MATH -> NESSUN RISULTATO
+      if (count === newsWrapper.length) {
+        noResults.innerHTML = "Nessun risultato";
       } else { //CANCELLA MESSAGGIO
         noResults.innerHTML = "";
       }
@@ -68,26 +68,26 @@ function searchNews() {
         if (textValue.toUpperCase().indexOf(filter) > -1) {
           //SE ESISTE MOSTRA SOLO LA CORRISPONDENZA
           newsHeader = title[i].parentNode;
-		  newsHeader.parentNode.className = "newsWrapper"
+          newsHeader.parentNode.className = "newsWrapper"
         } else {
           //E NASCONDI LE ALTRE
           newsHeader = title[i].parentNode;
-		  newsHeader.parentNode.className = "newsWrapper hidden"
+          newsHeader.parentNode.className = "newsWrapper hidden"
         }
       }
       //CONTROLLO SE NON CI SONO MATCH
-	  count = 0;
-	  for (i = 0; i < newsWrapper.length; i+= 1) {
+      count = 0;
+      for (i = 0; i < newsWrapper.length; i+= 1) {
         //SE TUTTE LE NEWS HANNO IL CAMPO HIDDEN
         if (newsWrapper[i].className === "newsWrapper hidden") {
           count += 1; //INCREMENTA COUNT
-		} else {
+        } else {
           count -= 1; //VICEVERSA DECREMENTA
-		}
+        }
       }
       //NESSUN MATH -> NESSUN RISULTATO
       if(count === newsWrapper.length) {
-		  noResults.innerHTML = "Nessun risultato";
+        noResults.innerHTML = "Nessun risultato";
       } else { //CANCELLA MESSAGGIO
         noResults.innerHTML = "";
       }
@@ -96,29 +96,29 @@ function searchNews() {
     case "2":
       for (i = 0; i < date.length; i += 1) {
         textValue = date[i].innerText || date[i].textContent;
-		//CERCA CORRISPONDENZA
+        //CERCA CORRISPONDENZA
         if (textValue.toUpperCase().indexOf(filter) > -1) {
           //SE ESISTE MOSTRA SOLO LA CORRISPONDENZA
           newsHeader = date[i].parentNode;
-		  newsHeader.parentNode.className = "newsWrapper"
+          newsHeader.parentNode.className = "newsWrapper"
         } else { //E NASCONDI LE ALTRE
           newsHeader = date[i].parentNode;
-		  newsHeader.parentNode.className = "newsWrapper hidden"
+          newsHeader.parentNode.className = "newsWrapper hidden"
         }
       }
       //CONTROLLO SE NON CI SONO MATCH
-	  count = 0;
-	  for (i = 0; i < newsWrapper.length; i+= 1) {
+      count = 0;
+      for (i = 0; i < newsWrapper.length; i+= 1) {
         //SE TUTTE LE NEWS HANNO IL CAMPO HIDDEN
         if (newsWrapper[i].className === "newsWrapper hidden") {
           count += 1; //INCREMENTA COUNT
-		} else {
+        } else {
           count -= 1; //VICEVERSA DECREMENTA
-		}
+        }
       }
       //NESSUN MATH -> NESSUN RISULTATO
       if(count === newsWrapper.length) {
-		  noResults.innerHTML = "Nessun risultato";
+        noResults.innerHTML = "Nessun risultato";
       } else { //CANCELLA MESSAGGIO
         noResults.innerHTML = "";
       }
