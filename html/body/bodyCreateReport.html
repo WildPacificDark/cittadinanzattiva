@@ -1,0 +1,73 @@
+		
+			<div class="wrapper">
+				<div class="general">
+					<div class="report_div">
+						<h2>Crea Segnalazione</h2>
+						<form autocomplete="on" id="reportForm" class="contenuto-modulo animato" 
+						action="../php/form/checkReport.php"  method="post" enctype="multipart/form-data">
+							<div id="tab_0" class="container">
+								<h3>Passo 1 di 3</h3>
+								<fieldset>
+									<legend>Tipo Segnalazione</legend>
+									<p>I campi contrassegnati da un * sono obbligatori</p>
+									<label for="tipoSegnalazione">Seleziona il tipo di segnalazione *</label>
+									<select id="tipoSegnalazione" name="tipoSegnalazione">
+										<option value=""></option>
+										<option value="Altro">Altro</option>
+										<option value="Animali">Animali</option>
+										<option value="Autoveicoli Abbandonati">Autoveicoli Abbandonati</option>
+										<option value="Barriere Architettoniche">Barriere Architettoniche</option>
+										<option value="Buche / Strade Dissestate">Buche / Strade Dissestate</option>
+										<option value="Contenitori Rifiuti">Contenitori Rifiuti</option>
+										<option value="Furti / Microcriminalit&agrave;">Furti / Microcriminalit&agrave;</option>
+										<option value="Graffiti">Graffiti</option>
+										<option value="Immigrati / Nomadi">Immigrati / Nomadi</option>
+										<option value="Inquinamento">Inquinamento</option>
+										<option value="Illuminazione Pubblica">Illuminazione Pubblica</option>
+										<option value="Abusivismo / Occupazione">Abusivismo / Occupazione</option>
+										<option value="Parcheggi / Divieti di Sosta">Parcheggi / Divieti di Sosta</option>
+										<option value="Rifiuti">Rifiuti</option>
+										<option value="Segnaletica Stradale / Semafori">Segnaletica Stradale / Semafori</option>
+										<option value="Situazioni di Degrado Sociale">Situazioni di Degrado Sociale</option>
+										<option value="Verde Pubblico">Verde Pubblico</option>
+									</select>
+									<p class="errorField" id="errorSelect"></p>
+									<button type="button" id="firstNextBtn" class="nextBtn" onclick="nextTab(0)">Avanti</button>
+								</fieldset>
+							</div>
+							<div id="tab_1" class="container hidden">
+								<h3>Passo 2 di 3</h3>
+								<fieldset>
+									<legend>Luogo Segnalazione</legend>
+									<label for="provincia">Provincia *</label>
+									<input type="text" id="provincia" name="provincia" placeholder="Treviso" required="required" />
+									<p class="errorField" id="errorProv"></p>
+									<label for="paese">Comune *</label>
+									<input type="text" id="paese" name="comune" placeholder="Paese" maxlength="30" required="required" />
+									<p class="errorField" id="errorPaese"></p>
+									<label for="nomeStrada">Nome della strada *</label>
+									<input type="text" id="nomeStrada" name="toponimo" placeholder="Martiri della libert&agrave;" maxlength="30" required="required" />
+									<p class="errorField" id="errorAddress"></p>
+									<button type="button" class="prevBtn" onclick="prevTab(1)">Indietro</button>
+									<button type="button" class="nextBtn" onclick="nextTab(1)">Avanti</button>
+								</fieldset>
+							</div>
+							<div id="tab_2" class="container hidden">
+								<h3>Passo 3 di 3</h3>
+								<fieldset>
+									<legend>Descrizione</legend>
+									<label for="text">Fornisci una breve descrizione del problema *</label>
+									<textarea id="text" name="description" placeholder="Inserisci una descrizione del problema" required="required"></textarea>
+									<p class="errorField" id="errorText"></p>
+									<label for="fileToUpload">Carica prova fotografica</label>
+									<input type="file" id="fileToUpload" name="fileToUpload" />
+									<p id="img_rule_noscript">Il file deve avere una dimensione massima di 2MB e deve essere in formato JPG, JPEG, PNG, GIF</p>
+									<button type="button" class="prevBtn" onclick="prevTab(2)">Indietro</button>
+									<button type="button" class="nextBtn" onclick="nextTab(2)">Invia</button>
+								</fieldset>
+							</div>
+							<script src="../js/reportCheck.js" type="text/javascript"></script>
+						</form>
+					</div>
+				</div>
+			</div>

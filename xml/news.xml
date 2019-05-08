@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<root xmlns="http://www.cittadinanzattiva.city" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="xsd/news.xsd">
+  <news id="4">
+    <titolo>Barra di ricerca per le news</titolo>
+    <data>2019-04-17</data>
+    <ora>10:48</ora>
+    <corpo>&#xC8; stata aggiunta una barra di ricerca nella pagina delle news, per velocizzare la ricerca di una news</corpo>
+  </news>
+  <news id="3">
+    <titolo>Microsoft Edge</titolo>
+    <data>2019-04-17</data>
+    <ora>15:27</ora>
+    <corpo>Sono stati riscontrati dei problemi con la classe CSS del men&#xF9; di navigazione in MS Edge</corpo>
+  </news>
+  <news id="2">
+    <titolo>Barra di ricerca per le segnalazioni</titolo>
+    <data>2019-04-05</data>
+    <ora>21:29</ora>
+    <corpo>&#xC8; stata aggiunta una barra di ricerca nell'elenco delle segnalazioni per velocizzare la ricerca di una segnalazione</corpo>
+  </news>
+  <news id="1">
+    <titolo>Lavori in corso</titolo>
+    <data>2019-03-12</data>
+    <ora>12:52</ora>
+    <corpo>Ristrutturazione del sito in corso</corpo>
+  </news>
+  <check>Elemento di escape, controlla se il documento &#xE8; vuoto</check>
+</root>

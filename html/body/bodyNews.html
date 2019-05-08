@@ -1,0 +1,17 @@
+<div class="wrapper">
+				<div class="general">
+					<h2>Ultime News</h2>
+					<div class="news">
+						<div class="searchDiv">
+							<label for="searchNews" id="searchLable">Cerca velocemente una news</label>
+							<input type="text" id="searchNews" onkeyup="searchNews()" tabindex="5" placeholder="Cerca news..." />
+							<p>Seleziona il tipo di campo da ricercare</p>
+							<input type="radio" id="idReport" name="queryValue" value="0" checked="checked" tabindex="6" />
+							<label for="idReport">ID</label>
+							<input type="radio" id="newsName" name="queryValue" value="1" tabindex="7" />
+							<label for="newsName">Titolo</label>
+							<input type="radio" id="date" name="queryValue" value="2" tabindex="8" />
+							<label for="date">Data</label>
+							<p id="noResults"></p>
+						</div>
+					

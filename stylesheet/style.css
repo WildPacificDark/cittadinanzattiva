@@ -1,0 +1,1100 @@
+/*BODY*/
+
+* {
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+body {
+    /*
+        Background vector created by freepik - www.freepik.com
+        https://www.freepik.com/free-photos-vectors/background
+        Modified by Elia Vettoretto
+    */
+    background-attachment: fixed;
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	font-family: Georgia, serif;
+	margin: auto;
+	min-width: 350px;
+	overflow: auto;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+
+h2, h3 {
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*DIV PRINCIPALE DI OGNI PAGINA*/
+.core {
+	color: rgb(39, 39, 39);
+	font-family: 'Exo', serif;
+	margin: auto;
+}
+
+/*MENU DI NAVIGAZIONE*/
+
+.nav_cover {
+    background-color: #100e17;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    overflow: hidden;
+    padding: 3em 0em;
+    position: fixed;
+    top: 0px;
+    transition: padding 0.5s;
+    width: 100%;
+    z-index: -1;
+}
+
+.resized_cover {
+	padding: 2em 0;
+}
+
+/*SEMBRA CHE MS EDGE NON RIESCA A GESTIRE CONTEMPORANEAMENTE 
+L'ATTIBUTO FIXED E BORDER-RADIUS IN QUESTO CASO*/
+.navEdge {
+	background-image: linear-gradient(to right,#ff8a00,#da1b60);
+    color: white;
+    margin: auto;
+    padding: 4.25em 0;
+	position: -ms-device-fixed;
+    position: fixed;
+    top: 0;
+    transition: padding 0.5s;
+	width: 100%;
+    z-index: 1;
+}
+
+.nav {
+    background-image: linear-gradient(to right,#ff8a00,#da1b60);
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    color: white;
+    margin: auto;
+    padding: 4.25em 0;
+	position: -ms-device-fixed;
+    position: fixed;
+    top: 0;
+    transition: padding 0.5s;
+	width: 100%;
+    z-index: 1;
+}
+
+.resized_nav {
+	padding: 3em 0;
+}
+
+.nav ul,
+.navEdge ul {
+    float: right;
+    position: absolute;
+    right: 4em;
+    top: 0.3em;
+	-webkit-transition: top 0.5s, margin 1s, padding 1s;
+	-moz-transition: top 0.5s, margin 1s, padding 1s;
+	-o-transition: top 0.5s, margin 1s, padding 1s;
+	transition: top 0.5s, margin 1s, padding 1s;
+}
+
+.resized_nav ul {
+	top: -0.7em;
+}
+
+.nav ul li,
+.navEdge ul li {
+    display: inline-block;
+    margin: 0 1em;
+    padding: 0;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.nav ul li a,
+.navEdge ul li a {
+	border-radius: 16px;
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: 'Exo', sans-serif;
+    font-size: 1em;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.nav ul li a:hover,
+.nav ul li a:focus,
+.navEdge ul li a:hover,
+.navEdge ul li a:focus {
+	background-image: linear-gradient(140deg, #ff8a00, #da1b60);
+    border-radius: 16px;
+    color: white;
+	cursor: pointer;
+    padding: 1em;
+}
+
+.nav ul li a:visited,
+.navEdge ul li a:visited {
+	color: rgb(255, 255, 255);
+}
+
+.nav ul li a:hover:visited,
+.navEdge ul li a:hover:visited {
+	color: white;
+}
+
+/*ICONE*/
+
+#home_icon {
+	width: 36px;
+	height: 36px;
+}
+
+/*LOGO DEL SITO*/
+
+.logo h1 {
+    display: inline-block;
+	font-size: 1.9em;
+    left: 4.5em;
+    padding: 0;
+    position: fixed;
+    top: 0.15em;
+	transition: 0.5s;
+}
+
+.logo img {
+	animation: fadeIn ease-in-out 0.5s forwards;
+	left: 5em;
+	margin: 0;
+	position: fixed;
+}
+
+.logo_resized h1 {
+	top: -0.2em;
+	transition: 0.5s
+}
+
+.logo_resized img {
+	animation: fadeOut ease-in-out 0.5s forwards;
+}
+
+@keyframes fadeIn {
+	from {	
+		opacity: 0;
+		transform: rotate(0deg);
+		top: 0.6em
+	}
+	to {  
+		opacity: 1;
+		transform: rotate(360deg);
+		top: 1.225em;
+	}
+}
+
+@keyframes fadeOut {
+	from { 
+		opacity: 1;
+		transform: rotate(360deg);
+		top: 1.225em;
+	}
+	to {
+		opacity: 0;
+		transform: rotate(0deg);
+		top: 0.6em;
+	}
+}
+
+/*BREADCRUMB*/
+.breadcrumb {
+	display: block;
+	font-family: 'Exo', sans-serif;
+	font-size: 0.9em;
+	left: 10%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 7.4em;
+    transition: top 0.5s;
+	z-index: 1;
+}
+
+.breadcrumb_resized {
+	top: 4.9em;
+}
+
+/*CONTENITORE*/
+.wrapper {
+	display: block;
+    font-family: 'Exo', sans-serif;
+	margin: auto;
+	margin-bottom: 20%;
+	position: relative;
+    text-align: center;
+	top: 8em;
+	transition: 1s;
+}
+
+.wrapper h2 {
+	font-size: 2em;
+}
+
+/*CLASSE GENERALE PER IL TESTO*/
+.general {
+	display: block;
+}
+
+.general h2 {
+    font-size: 2em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    -webkit-transition: font-size 1s;
+    -moz-transition: font-size 1s;
+    -o-transition: font-size 1s;
+    transition: font-size 1s;
+}
+
+.general h3 {
+	font-size: 1.4em;
+    margin-bottom: 5%;
+    -webkit-transition: font-size 1s;
+    -moz-transition: font-size 1s;
+    -o-transition: font-size 1s;
+    transition: font-size 1s;
+}
+
+.general h4 {
+	font-size: 1.2em;
+	margin: auto;
+	margin-top: 5%;
+}
+
+.general p {
+	font-size: 1.1em;
+    margin: 5% 25%;
+}
+
+/*PULSANTI ACCEDI\REGISTRATI (DIV)*/
+
+#accedi {
+    display: inline-block;
+	margin-left: auto;
+    margin-right: 7%;
+    -webkit-transition: margin-left 1s, margin-bottom 1s;
+    -moz-transition: margin-left 1s, margin-bottom 1s;
+    -o-transition: margin-left 1s, margin-bottom 1s;
+    transition: margin-left 1s, margin-bottom 1s;
+}
+
+#registrati {
+    display: inline-block;
+    margin-left: 7%;
+	margin-right: auto;
+	-webkit-transition: margin-right 1s, margin-top 1s;
+	-moz-transition: margin-right 1s, margin-top 1s;
+	-o-transition: margin-right 1s, margin-top 1s;
+    transition: margin-right 1s, margin-top 1s;
+}
+
+/*LINK ALLE FORM DI ACCESSO/REGISTRAZIONE*/
+
+#login, #reg {
+    background-color: white;
+    /*FALLBACK BACKGROUND*/
+    border: 1px solid rgb(64, 65, 74);
+    border: 1px solid rgba(64, 65, 74, 0.5);
+    border-radius: 16px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-family: 'Exo', sans-serif;
+    font-size: 1em;
+    padding: 0.5em 3em;
+    text-decoration: none;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+
+#login:hover, #login:focus, 
+#reg:hover, #reg:focus {
+	background-image: linear-gradient(140deg, #ff8a00, #da1b60);
+    color: white;
+}		   		
+
+/*MODIFICA IL COLORE DEL PLACEHOLDER*/
+
+::placeholder { /*CHROME, FIREFOX, OPERA, SAFARI*/ 
+    color: rgb(173, 173, 173);
+    opacity: 1;
+	text-align: center;
+}
+
+:-ms-input-placeholder { /*INTERNET EXPLORER*/
+    color: rgb(173, 173, 173);
+}
+
+::-ms-input-placeholder { /*MICROSOFT EDGE*/
+    color: rgb(173, 173, 173);
+}
+
+/*ASPETTO GENERALE DELLE FORM*/
+
+.contenuto-modulo {
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 16px;
+    height: auto;
+    margin: auto;
+	margin-bottom: 2em;
+    text-align: center;
+    width: 350px;
+}
+
+.contenuto-modulo h3 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.container h3 {
+	font-size: 1.3em;
+	margin: 0;
+	margin-top: 0.8em;
+}
+
+.container fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container legend {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: auto;
+	padding-top: 1em;
+}
+
+.container label {
+    display: block;
+    margin: 1em;
+}
+
+.container select {
+	padding: 1em;
+}
+
+.container textarea {
+	border-radius: 16px;
+	height: 150px;
+	padding: 1em;
+	width: 80%;
+}
+
+.container button {
+    background-color: #4CAF50;
+    border: none;
+	border-radius: 8px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-family: 'Exo', sans-serif;
+    margin: 1.6em;
+    padding: 1em;
+    width: 40%;
+}
+
+.container button:hover,
+.container button:focus {
+    background-color: rgba(76, 175, 80, 0.8);
+}
+
+.container input {
+    border: 1px solid rgb(152, 152, 152);
+	border-radius: 16px;
+    box-sizing: border-box;
+    color: rgb(64, 65, 74);
+    display: block;
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+    width: 80%;
+}
+
+.container  input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: none;
+}
+
+.container input[type=date]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: none;
+}
+
+.container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.container input[type="submit"]:hover,
+.container input[type="submit"]:focus {
+ background-color: rgba(76, 175, 80, 0.8);
+}
+
+/*PULSANTE PER RESETTARE LA FORM*/
+
+.container .cancelbtn {
+    background-color: #f44336;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-family: 'Exo', sans-serif;
+	margin-top: -1em;
+    width: 25%;
+}
+
+.container .cancelbtn:hover,
+.container .cancelbtn:focus {
+    background-color: rgba(244, 67, 54, 0.8);
+}
+
+.cancelbtn a{
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+/*CAMBIA IL COLORE DELLA CASELLA DELL' INPUT 
+SE IL CAMPO E' STATO RIEMPITO CORRETTAMENTE*/
+
+.container .invalid {
+    background-color: rgba(255, 0, 0, 0.18);
+}
+
+.container .valid {
+    background-color: rgba(0, 210, 0, 0.26);
+}
+ 
+.general .errorField {
+    font-size: 0.8em;
+    color: red;
+    margin-bottom: -4px;
+    margin-top: 4px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* AGGIUNGI ANIMAZIONE DI ZOOM QUANDO SI APRE LA FORM*/
+.animato {
+  -webkit-animation: animatezoom 0.6s;
+  -moz-animation: animatezoom 0.6s;
+  -o-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+/*WEBKIT BROWSER*/
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+
+/*FIREFOX*/
+@-moz-keyframes animatezoom {
+  from {-moz-transform: scale(0)} 
+  to {-moz-transform: scale(1)}
+}
+
+/*OPERA*/
+@-o-keyframes animatezoom {
+  from {-o-transform: scale(0)} 
+  to {-o-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/*FORM DI LOGIN (CONTROLLO)*/
+
+#wrongInfo {
+    font-size: 1em;
+	margin: 5% auto;
+}
+
+#loginStatus {
+    color: red;
+    font-size: 1.1em;
+    margin: auto;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+/*FORM DI SIGNUP*/
+
+.container .prevBtn {
+    background-color: rgb(111, 110, 110);
+    border: none;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Exo', sans-serif;
+	margin: auto;
+	margin-top: 2em;
+	margin-right: 0.3em;
+	margin-bottom: 2em;
+    width: 40%;
+}
+
+.container .nextBtn {
+    background-color: #4CAF50;
+    border: none;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Exo', sans-serif;
+	margin: auto;
+	margin-top: 2em;
+	margin-left: 0.3em;
+	margin-bottom: 2em;
+    width: 40%;
+}
+
+#firstNextBtn {
+	display: block;
+	margin-left: auto;
+}
+
+.container .prevBtn:hover,
+.container .prevBtn:focus {
+    background-color: #929292;
+}
+
+.container .nextBtn:hover,
+.container .nextBtn:focus {
+    background-color: rgba(76, 175, 80, 0.8);
+}
+
+/*CLASSI PER GESTIRE LE TAB DELLE FORM*/
+
+.hidden {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+/*SERVIZI*/
+.report_link {
+	display: block;
+	margin: auto;
+}
+
+.report_link a {
+	background-color: white;
+    border: 1px solid rgb(64, 65, 74);
+    border: 1px solid rgba(64, 65, 74, 0.5);
+    border-radius: 16px;
+    color: rgb(39, 39, 39);
+    cursor: pointer;
+	display: inline-block;
+    font-family: 'Exo', sans-serif;
+    font-size: 1em;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+	width: 100%;
+}
+
+.report_link a:hover,
+.report_link a:focus {
+	background-image: linear-gradient(140deg, #ff8a00, #da1b60);
+    color: white;
+}
+
+#crea_report, #view_report {
+	display: inline-block;
+}
+
+#crea_report {
+	margin-right: 3.5%;
+}
+
+#view_report {
+	margin-left: 3.5%;
+}
+
+.login_required {
+	margin: auto;
+	display: block;
+	transition: 0.6s;
+}
+
+.login_required a:hover,
+.login_required a:focus,
+#how_to_post:hover,
+#how_to_post:focus {
+	background-image: linear-gradient(140deg, #ff8a00, #da1b60);
+	color: white;
+	border: 1px solid rgba(64, 65, 74, 0.5);
+	border-radius: 16px;
+	margin: auto;
+	padding: 0.5em;
+	text-decoration: none;
+	-webkit-transition: 0.6s;
+	-moz-transition: 0.6s;
+	-o-transition: 0.6s;
+	transition: 0.6s;
+}
+
+/*CREA SEGNALAZIONE*/
+
+.report_div p {
+	color: red;
+	font-size: 0.8em;
+	margin: auto;
+	margin-top: 1em;
+	width: 90%;
+}
+
+/*HOW TO*/
+
+.howto {
+	display: block;
+	margin: auto;
+	width: 60%;
+}
+
+.howto h2 {
+	font-size: 1.6em;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+.howto h3 {
+	font-size: 1.1em;
+	margin: auto;
+	margin-bottom: 2em;
+}
+
+.howto ul {
+	margin-top: 2em;
+}
+
+.howto ul li p {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+/*VISUALIZZA SEGNALAZIONE*/
+
+.viewReoport {
+	margin: auto;
+}
+
+.viewReport h2 {
+	font-size: 1.6em;
+    margin-bottom: 0.6em;
+}
+
+.viewReport h3 {
+	font-size: 1.2em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.viewReport h4 {
+	font-size: 1em;
+	margin-top: 0em;
+}
+
+.viewReport p {
+    display: block;
+	font-size: 1.1em;
+	margin: auto;
+	padding: 0.5em;
+	text-align: center;
+	width: 60%;
+}
+
+.viewReport table {
+	border: 1px solid #fff);
+	border-collapse: collapse;
+	margin: auto;
+	width: 60%
+}
+
+.viewReport table caption {
+	margin: 0.5em;
+}
+
+.viewReport thead {
+	background-image: linear-gradient(140deg, #ff8a00, #da1b60);
+	color: white;
+}
+
+.viewReport thead tr th {
+	padding: 1em;
+}
+
+.viewReport tbody {
+	background-color: #100e17;
+	color: white;
+}
+
+.viewReport tbody tr {
+	border: 1px solid #fff;
+	-webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.viewReport tbody tr:hover,
+.viewReport tbody tr:focus {
+	background-color: #fff;
+	color: #100e17;
+	cursor: pointer;
+}
+
+.viewReport tbody tr td {
+	padding: 1em;
+}
+
+.viewReport input[type="text"],
+#searchNews {
+	background-image: url("../img/icon/searchicon.png");
+	background-position: 6px 4px;
+	background-repeat: no-repeat;
+	border-left: 2px solid #ff8a00;
+	border-top: 2px solid #ff8a00;
+	border-right: 2px solid #da1b60;
+	border-bottom: 2px solid #da1b60;
+	border-radius: 16px;
+	padding: 0.5em 0.5em 0.5em 2.4em;
+	width: 20%;
+}
+
+#reportDesc {
+	font-style: italic;
+	font-weight: 600;
+}
+
+.news .searchDiv,
+.viewReport .searchDiv {
+	display: block;
+	margin: auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.news .searchDiv p,
+.viewReport .searchDiv p {
+	font-size: 0.9em;
+	margin: 1em auto;
+}
+
+.news .searchDiv input[type="radio"],
+.viewReport .searchDiv input[type="radio"] {
+	margin: auto 0.5em;
+}
+
+#searchLable {
+    display: block;
+    margin-bottom: 0.8em;
+}
+
+#noResults {
+	font-size: 1.5em;
+	margin: 5% auto;
+}
+
+#uploadedFile {
+	margin: auto;
+	max-width: 640px;
+    max-height: 320px;
+}
+
+/*NEWS*/
+.news {
+	display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.news p {
+	margin-top: -10%;
+	margin-bottom: -3%;
+}
+
+.newsWrapper {
+	margin: auto;
+    margin-top: 3em;
+    width: 100%;
+    max-width: 600px;
+}
+
+.newsHeader {
+	background-image: linear-gradient(to right,#ff8a00,#da1b60);
+	border-top-right-radius: 16px;
+	border-top-left-radius: 16px;
+    padding: 1.2em;
+    color: white;
+}
+
+.newsId,
+.newsTitle {
+	float: left;
+	margin: auto 1em;
+	overflow: hidden;
+    position: relative;
+    top: -0.6em;
+}
+
+.newsTitle {
+	margin-left: -0.5em;
+}
+
+.newsDate,
+.newsHour {
+	float: right;
+	overflow: hidden;
+    position: relative;
+    top: -0.6em;
+}
+
+.newsHour {
+	margin-right: 1em;
+}
+
+.newsBody {
+	background-color: #100e17;
+	border-bottom-left-radius: 16px;
+	border-bottom-right-radius: 16px;
+    color: white;
+	display: block;
+	padding: 0.6em;
+    text-align: left;
+}
+
+.newsBody p {
+	font-size: 1em;
+	margin: 1em;
+}
+
+#news_form {
+	display: block;
+	margin: auto;
+	margin-top: 4%
+}
+
+#news_form div fieldset legend{
+	display: block;
+	padding-top: 2em;
+}
+
+/*CONTATTI*/
+
+.general .contact_info {
+	display: block;
+	margin: auto;
+}
+
+.general .contact_info h3 {
+	margin: 1em auto;
+}
+
+.general .contact_info p {
+	margin: 1em 25%;
+}
+
+.contact_icon {
+	display: block;
+	margin: auto;
+}
+
+.contact_icon a {
+	text-decoration: none;
+}
+
+.contact_icon a img {
+    height: auto;
+    padding: 1em;
+    max-width: 110px;
+	-webkit-transition: 0.9s;
+	-moz-transition: 0.9s;
+	-o-transition: 0.9s;
+	transition: 0.9s;
+    width: 100%;
+}
+
+.contact_icon a img:hover,
+.contact_icon a img:focus {
+	max-width: 130px;
+	width: 100%;
+}
+
+.contact_button {
+	display: block;
+	margin: 3.5em auto;
+}
+
+.contact_button a,
+#backButton,
+#printButton {
+	background-color: white;
+    border: 1px solid rgb(64, 65, 74);
+    border: 1px solid rgba(64, 65, 74, 0.5);
+    border-radius: 16px;
+    color: rgb(39, 39, 39);
+    cursor: pointer;
+    font-family: 'Exo', sans-serif;
+    font-size: 1em;
+    padding: 0.5em 3em;
+    text-decoration: none;
+	-webkit-transition: 0.6s;
+	-moz-transition: 0.6s;
+	-o-transition: 0.6s;
+	transition: 0.6s;
+}
+
+.contact_button a:hover,
+.contact_button a:focus,
+#backButton:hover,
+#backButton:focus,
+#printButton:hover,
+#printButton:focus {
+	background-image: linear-gradient(140deg, #ff8a00, #da1b60);
+	color: white;
+}
+
+#backButton,
+#printButton {
+	margin-top: 3em;
+	margin-left: 2em;
+	margin-right: 2em;
+	margin-bottom: -2em;
+}
+
+/*FOOTER*/
+
+.footer_cover {
+	background-color: #100e17;
+	bottom: 0%;
+	border-top-left-radius: 100px;
+	border-top-right-radius: 100px;
+	padding: 5.5em;
+	position:absolute;
+	z-index: -1;
+	width: 100%;
+}
+
+.footer {
+	background-image: linear-gradient(to right, #ff8a00, #da1b60);
+	border-top-right-radius: 100px;
+    border-top-left-radius: 100px;
+	font-family: 'Exo', sans-serif;
+	font-size: 0.95em;
+	position: absolute;
+	text-align: center;
+	z-index: 1;
+	width: 100%;
+}
+
+.footer p {
+    color: white;
+	margin: auto;
+	overflow: hidden;
+	padding-bottom: 1.5em;
+}
+
+/*IMMAGINI SOCIAL*/
+
+.social {
+	bottom: -1em;
+	margin: auto;
+	position: relative;
+}
+
+.social p {
+    margin: auto;
+    text-align: center;
+}
+
+.social a {
+    text-decoration: none;
+}
+
+.social a img {
+    height: auto;
+    margin: auto;
+    padding: 0 0.5em;
+    -webkit-transition: 0.9s;
+    -moz-transition: 0.9s;
+    -o-transition: 0.9s;
+    transition: 0.9s;
+    width: 55px;
+}
+
+/*LINK UTILI*/
+
+.utility {
+	bottom: 0.25em;
+	position: relative;
+}
+
+.utility a {
+	border-radius: 16px;
+    color: #fff;
+    display: inline-block;
+	margin: 0.5em;
+    padding: 0.5em;
+    text-decoration: none;
+	-webkit-transition: 0.6s;
+    -moz-transition: 0.6;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+}
+
+.utility a:hover,
+.utility a:focus {
+	border-radius: 16px;
+    background-color: #100e17;
+    color: white;
+    padding: 0.5em;
+}
+
+.zerobyte {
+    margin-top: 2em;
+}
+
+/*ERRORI*/
+
+.error p {
+	font-size: 1.5em;
+	margin: 1em;
+}

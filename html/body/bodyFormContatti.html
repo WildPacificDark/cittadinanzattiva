@@ -1,0 +1,28 @@
+    
+			<div class="wrapper">
+				<div class="general">
+				<h2>Scrivi la tua richiesta</h2>
+					<form class="contenuto-modulo animato noscript" id="contact-form" action="../php/form/contacts.php" method="post">
+						<div class="container">
+							<fieldset>
+								<legend>Richiesta</legend>
+								<label for="name">Nome</label>
+								<input type="text" id="name" name="nome" placeholder="Mario" required="required" />
+								<p class="errorField" id="errorName"></p>
+								<label for="surname">Cognome</label>
+								<input type="text" id="surname" name="cognome" placeholder="Rossi" required="required" />
+								<p class="errorField" id="errorSurname"></p>
+								<label for="contact-email">Email</label>
+								<input type="email" id="contact-email" name="email" placeholder="mario.rossi&#64;libero.it" required="required" />
+								<p class="errorField" id="errorEmail"></p>
+								<label for="request-textarea">Motivo per cui vuoi contattarci</label>
+								<textarea id="request-textarea" name="textarea" placeholder="Questo sito &egrave; fantastico" required="required"></textarea>
+								<p class="errorField" id="errorTextarea"></p>
+								<button type="submit" title="Invia la richiesta" onclick="checkInput()">Invia</button>
+							</fieldset>
+						</div>
+						<script src="../js/contactsCheck.js"></script>
+					</form>
+				</div>
+			</div>
+			

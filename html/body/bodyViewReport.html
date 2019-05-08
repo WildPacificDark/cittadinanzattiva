@@ -1,0 +1,30 @@
+<div class="wrapper">
+				<div class="general">
+					<div class="viewReport"> 
+						<h2>Elenco delle segnalazioni</h2>
+						<h3>Clicca su una riga della tabella per vedere la segnalazione in dettaglio</h3>
+						<div class="searchDiv">
+							<label for="searchTable" id="searchLable">Cerca velocemente una segnalazione</label>
+							<input type="text" id="searchTable" onkeyup="searchTable()" tabindex="5" placeholder="Cerca..." />
+							<p>Seleziona il tipo di campo da ricercare</p>
+							<input type="radio" id="user" name="queryValue" value="0" checked="checked" tabindex="6" />
+							<label for="user">Utente</label>
+							<input type="radio" id="idReport" name="queryValue" value="1" tabindex="7" />
+							<label for="idReport">ID</label>
+							<input type="radio" id="reportType" name="queryValue" value="2" tabindex="8" />
+							<label for="reportType">Tipo Segnalazione</label>
+							<input type="radio" id="date" name="queryValue" value="3" tabindex="9" />
+							<label for="date">Data</label>
+						</div>
+						<table id="reportTable" title="Tabella delle segnalazioni">
+							<caption>Tabella in cui sono riportate tutte le segnalazioni effettuate</caption>
+							<thead>
+								<tr>
+									<th scope="col">Utente</th>
+									<th scope="col">Id Segnalazione</th>
+									<th scope="col">Tipo Segnalazione</th>
+									<th scope="col">Data Segnalazione</th>
+								</tr>
+							</thead>
+							<tbody>
+							
