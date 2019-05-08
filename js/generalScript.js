@@ -51,7 +51,7 @@ function scrollFunction() {
         logo.className = "logo"
         breadcrumb.className = "breadcrumb";
       }
-    }
+  }
 }
 //FUNZIONE CHE APRE LA SEGNALAZIONE RICHIESTA (CASO KEYPRESS)
 function openReportPress(reportId, event) {
