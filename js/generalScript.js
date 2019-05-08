@@ -5,13 +5,13 @@ window.onload = function () {
   "use strict";
   if (navigator.appVersion.indexOf("Edge") > -1) {
     isEdge = true;
-	document.getElementById("navbar").className = "navEdge";
+    document.getElementById("navbar").className = "navEdge";
   }
 }  	
 //FUNZIONE CHIAMANTE PER LO SCROLLCHECK
 window.onscroll = function() {
   "use strict";
-    scrollFunction();
+  scrollFunction();
 }
 //FUNZIONE CHE MODIFCA L'ALTEZZA DELLA NAVBAR IN BASE ALLO SCROLL
 function scrollFunction() {
