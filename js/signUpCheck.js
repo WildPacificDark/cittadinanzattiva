@@ -38,20 +38,20 @@ function clearInput(tab) {
   //TAB 0
   if(tab === 0) {
     //RESETTA L'INPUT
-	nome.value = "";
-	cognome.value = "";
-	data.value = "";
-	cf.value = "";
-	//RESETTA IL MESSAGGIO DI ERRORE
-	errorName.innerHTML = "";
-	errorSurname.innerHTML = "";
-	errorData.innerHTML = "";
-	errorCf.innerHTML = "";
-	//RESETTA LA CLASSE CSS DELL'INPUT
-	nome.className = "useless";
-	cognome.className = "useless";
-	data.className = "useless";
-	cf.className = "useless";
+    nome.value = "";
+    cognome.value = "";
+    data.value = "";
+    cf.value = "";
+    //RESETTA IL MESSAGGIO DI ERRORE
+    errorName.innerHTML = "";
+    errorSurname.innerHTML = "";
+    errorData.innerHTML = "";
+    errorCf.innerHTML = "";
+    //RESETTA LA CLASSE CSS DELL'INPUT
+    nome.className = "useless";
+    cognome.className = "useless";
+    data.className = "useless";
+    cf.className = "useless";
   }
   if(tab === 1) {
     //RESETTA L'INPUT
@@ -139,10 +139,10 @@ function nextTab(currentTab) {
       document.getElementById("tab_2").className = "container hidden";
       document.getElementById("tab_3").className = "container";
     }
-	//SE TUTTI I DATI SONO CORRETTI INVIA LA FORM
-	if (currentTab === 3 && valid === true) {
-	  document.getElementById("regForm").submit();
-	}
+    //SE TUTTI I DATI SONO CORRETTI INVIA LA FORM
+    if (currentTab === 3 && valid === true) {
+      document.getElementById("regForm").submit();
+    }
   }
 }
 //FUNZIONE DI CONTROLLO DELL'INPUT
@@ -207,7 +207,7 @@ function checkInput(tab) {
       cognome.className = "invalid";
       //CONTROLLO -> FALSO
       check_2 = false;
-	  } else {
+      } else {
         //CANCELLA MESSAGGIO D'ERRORE
         errorSurname.innerHTML = "";
         //IL CAMPO DIVENTA VALIDO (VERDE)
@@ -255,18 +255,16 @@ function checkInput(tab) {
       //CONTROLLO -> FALSO
       check_4 = false;
     } else {
-	  var regs = data.value.match(/^(\d{4})\-(\d{1,2})\-(\d{1,2})$/);
-	  //SE L'ANNO INSERITO SUPERA LE 4 CIFRE
-	  if(regs === null) {
-		//STAMPA MESSAGGIO D'ERRORE
+      var regs = data.value.match(/^(\d{4})\-(\d{1,2})\-(\d{1,2})$/);
+      //SE L'ANNO INSERITO SUPERA LE 4 CIFRE
+      if(regs === null) {
+        //STAMPA MESSAGGIO D'ERRORE
         errorData.innerHTML = "Inserisci un anno compreso tra il 1900 ed il 2001";
         //IL CAMPO DIVENTA INVALIDO (ROSSO)
         data.className = "invalid";
         //CONTROLLO -> FALSO
         check_4 = false;
-	  }
-      //CONTROLLA SE L'ANNO E' COMPRESO TRA IL 1900 E IL 2001
-      else if (regs[1] < 1900 || regs[1] > 2001) {
+      } else if (regs[1] < 1900 || regs[1] > 2001) { //CONTROLLA SE L'ANNO E' COMPRESO TRA IL 1900 E IL 2001
         //STAMPA MESSAGGIO D'ERRORE
         errorData.innerHTML = "Inserisci un anno compreso tra il 1900 ed il 2001";
         //IL CAMPO DIVENTA INVALIDO (ROSSO)
