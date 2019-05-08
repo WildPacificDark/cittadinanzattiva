@@ -1,4 +1,5 @@
 function checkInput(tab) {
+  "use strict";
   //VARIABILI PER IL CONTROLLO GENERALE
   var check_1 = false;
   var check_2 = false;
@@ -43,8 +44,7 @@ function checkInput(tab) {
     //SE LA PROVINCIA E' VUOTA
     if (provincia.value === "") {
       //STAMPA MESSAGGIO D'ERRORE
-      errorProv.innerHTML = 
-	  "Non puoi lasciare vuoto questo campo";
+      errorProv.innerHTML = "Non puoi lasciare vuoto questo campo";
       //IL CAMPO DIVENTA ROSSO (INVALIDO)
       provincia.className = "invalid";
       //CONTROLLO -> FALSO
@@ -60,25 +60,24 @@ function checkInput(tab) {
         provincia.className = "invalid";
         //CONTROLLO -> FALSO
         check_1 = false;
-	  } else {
+      } else {
         //CANCELLA MESSAGGIO DI ERRORE
         errorProv.innerHTML = "";
         //IL CAMPO DIVENTA ROSSO (INVALIDO)
         provincia.className = "valid";
         //CONTROLLO -> VERO
         check_1 = true;
-	  }
+      }
     }
     //CONTROLLA IL CAMPO PAESE
     if (paese.value === "") {
       //STAMPA MESSAGGIO DI ERRORE
-      errorPaese.innerHTML = 
-	  "Non puoi lasciare vuoto questo campo";
+      errorPaese.innerHTML = "Non puoi lasciare vuoto questo campo";
       //IL CAMPO DIVENTA ROSSO (INVALIDO)
       paese.className = "invalid";
       //CONTROLLO -> FALSO
       check_2 = false;
-	} else {
+    } else {
       //L'INPUT MATCHA LA REGEX?
       pos = paese.value.search(/[^a-zA-Z\s\/.,']/g);
       //SE SEARCH >= 0, L'INPUT IMMESSO NON E'CORRETTO
@@ -101,8 +100,7 @@ function checkInput(tab) {
     //CONTROLLA LA STRADA
     if (nomeStrada.value === "") {
       //STAMPA MESSAGGIO DI ERRORE
-      errorAddress.innerHTML = 
-	  "Non puoi lasciare vuoto questo campo";
+      errorAddress.innerHTML = "Non puoi lasciare vuoto questo campo";
       //IL CAMPO DIVENTA ROSSO (INVALIDO)
       nomeStrada.className = " invalid";
       //CONTROLLO -> FALSO
@@ -126,7 +124,7 @@ function checkInput(tab) {
         //CONTROLLO -> VERO
         check_3 = true;
       }
-	}
+    }
     //CONTROLLA SE TUTTI I CAMPI SONO CORRETTI
     if (check_1 && check_2 && check_3) {
       return true;
@@ -140,8 +138,7 @@ function checkInput(tab) {
     //SE Il CAMPO E' VUOTO -> ERRORE
     if (text.value === "") {
       //STAMPA MESSAGGIO DI ERRORE
-      errorText.innerHTML = 
-	  "Non puoi lasciare vuoto questo campo";
+      errorText.innerHTML = "Non puoi lasciare vuoto questo campo";
       //IL CAMPO DIVENTA ROSSO (INVALIDO)
       text.className = " invalid";
       //CONTROLLO -> FALSO
