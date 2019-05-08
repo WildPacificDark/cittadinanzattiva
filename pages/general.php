@@ -52,7 +52,7 @@
 		echo '<p id="breadcrumb" class="breadcrumb">Home &rsaquo; Servizi &rsaquo; Elenco delle segnalazioni &rsaquo; 
 				<strong>Visualizza Segnalazione</strong></p>
 			</div>';
-		if(isset($_SESSION["user_id"])) {
+		if(isset($_SESSION["userId"])) {
 			$reportId = $_GET['reportId'];
 			require_once '../php/script/viewReportScript.php';
 			loadSelectedReport($reportId);
