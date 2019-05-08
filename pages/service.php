@@ -28,12 +28,8 @@
 	require_once '../html/nav/navService.html';
     
     //CONTROLLA SE C'E' UNA SESSIONE ATTIVA
-    if(isset($_SESSION['user_id']))
-    {
-        //PRELEVA LE VARIABILI DI SESSIONE
-        $ID = $_SESSION['user_id'];
-        $user = $_SESSION['username'];
-        
+    if(isset($_SESSION['userId']))
+    {      
         //STAMPA MESSAGGIO INIZIALE
         echo '<div class="wrapper">
 				<div class="general">
