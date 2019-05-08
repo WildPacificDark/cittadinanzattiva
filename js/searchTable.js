@@ -18,7 +18,7 @@ function searchTable() {
       checkedRadio = radios[i].value;
       //FERMA LA RICERCA
       stop = true;
-	}
+     }
   }
   //CERCA TRA LE RIGHE DELLA TABELLA E NASCONDI QUELLE CHE NON CORRISPONDONO
   for (i = 0; i < tr.length; i += 1) {
@@ -28,7 +28,7 @@ function searchTable() {
     if (td) {
       //PRELEVA IL VALORE DELL'INPUT
       textValue = td.textContent || td.innerText;
-	  //SE ESISTE UN'OCCORRENZA NELLA TABELLA
+      //SE ESISTE UN'OCCORRENZA NELLA TABELLA
       if (textValue.toUpperCase().indexOf(filter) > -1) {
         //MOSTRA LE RIGHE INTERESSATE
         tr[i].className = "useless";
